@@ -226,7 +226,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-2xl"
+            className="md:hidden text-2xl p-2"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <BsX /> : <BsList />}
