@@ -1,6 +1,4 @@
 import { Github, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
-
 
 const ProjectCard = ({ title, tagline, description, tags, image, links }) => (
   <div className="bg-transparent border-[1px] border-red-700/20 rounded-lg overflow-hidden group backdrop-blur-sm">
@@ -10,7 +8,6 @@ const ProjectCard = ({ title, tagline, description, tags, image, links }) => (
     </div>
     <div className="p-6">
       <p className="text-xl font-bold mb-3">{title}</p>
-      <p className="text-md font-medium">{tagline}</p>
       <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
         {description}
       </p>
@@ -52,11 +49,11 @@ const ProjectCard = ({ title, tagline, description, tags, image, links }) => (
   </div>
 );
 
-const Projects = () => {
+const AllProjects = () => {
+ 
   const projects = [
     {
-      title: "NeXoCard",
-      tagline: "AI Flashcard Generator",
+      title: "NeXoCard - AI Flashcard Generator",
       description:
         "Learn Smarter, Retain Better: AI-Powered Flashcards and Study Tools.",
       image: "/NexoCardWeb.png",
@@ -75,8 +72,46 @@ const Projects = () => {
       },
     },
     {
-      title: "Pacer",
-      tagline: "Your Go-To Sneaker Store",
+      title: "Beacon - Write. Share. Connect.",
+      description:
+        "Engage, Share, and Connect: A Feature-Rich Blogging Platform",
+      image: "/blog.png",
+      tags: [
+        "React JS",
+        "Spring Boot",
+        "MySQL",
+        "Material UI",
+        "HTML",
+        "CSS",
+        "Vercel",
+      ],
+      links: {
+        github: "https://github.com/AmanWasti9/Blogging-App-Frontend",
+        live: "https://beacon-liard.vercel.app/",
+      },
+    },
+    {
+      title: "PantryPilot - Your Digital Pantry Assistant",
+      description:
+        "A smart app to track pantry items, monitor expiry dates, and suggest recipes.",
+      image: "/pantrytracker.png",
+      tags: [
+        "Next JS",
+        "Material UI",
+        "Firebase",
+        "React",
+        "JavaScript",
+        "LangChain",
+        "API Integration",
+      ],
+      links: {
+        github: "https://github.com/AmanWasti9/pantry-tracker-app",
+        live: "https://pantry-tracker-aman.vercel.app/",
+      },
+    },
+
+    {
+      title: "Pacer - Your Go-To Sneaker Store",
       description:
         "A sleek and intuitive online sneaker store built with React JS, offering a smooth browsing experience with detailed product listings and a single-click purchase feature.",
       image: "/sneakerWeb.png",
@@ -86,9 +121,9 @@ const Projects = () => {
         live: "https://sneaker-store-pi.vercel.app/",
       },
     },
+
     {
-      title: "COVID-19 Tracker",
-      tagline: "Real-Time Global COVID19 Data Visualization",
+      title: "COVID-19 Tracker - Real-Time Global COVID-19 Data Visualization",
       description:
         "A real-time COVID-19 tracker that displays global statistics with interactive donut charts, offering insights into the pandemic's impact by country.",
       image: "/covidtrack.png",
@@ -105,10 +140,56 @@ const Projects = () => {
         live: "https://covid19-tracker-orpin-sigma.vercel.app/",
       },
     },
+
+    {
+      title: "Book Ecommerce Store - A Simple Online Bookstore",
+      description:
+        "A user-friendly, frontend-only online bookstore that lets you browse and explore a variety of books with a smooth, interactive interface.",
+      image: "/bookwebsss.png",
+      tags: ["HTML", "CSS", "BootStrap", "FontAwesome Icons", "JavaScript"],
+      links: {
+        github: "https://github.com/AmanWasti9/Book-Website",
+        live: "https://book-website-lovat.vercel.app/",
+      },
+    },
+
+    {
+      title: "Expense Tracker - Manage Your Spending with Ease",
+      description:
+        "A simple, frontend-only expense tracker built with React.js, allowing users to easily input, categorize, and visualize their expenses for better financial management.",
+      image: "/ExpenseTrack.png",
+      tags: [
+        "React JS",
+        "CSS",
+        "Material UI",
+        "Material Icons",
+        "JavaScript",
+        "Chart JS",
+      ],
+      links: {
+        github: "https://github.com/AmanWasti9/Expense-Track-React",
+        live: "https://amanwasti9.github.io/Expense-Track-React/",
+      },
+    },
+
+    {
+      title: "TextUtils - Your Go-To Text Manipulation Tool",
+      description:
+        "TextUtils is a React-based web application offering versatile text processing features like text formatting, space removal, case conversion, Lorem Ipsum generation, and word counting.",
+      image: "/TextUtilsWeb.png",
+      tags: ["React JS", "JavaScript", "CSS", "Text Processing", "Material UI"],
+      links: {
+        github: "https://github.com/AmanWasti9/TextUtils",
+        live: "https://amanwasti9.github.io/TextUtils/",
+      },
+    },
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-black">
+    <section
+      id="projects"
+      className="px-5 md:px-16 py-24 relative bg-white dark:bg-black"
+    >
       <div className="container mx-auto px-5 md:px-16">
         <h2 className="text-2xl font-bold text-center mb-2">
           Featured Projects
@@ -122,14 +203,9 @@ const Projects = () => {
             <ProjectCard key={index} {...project} />
           ))}
         </div>
-        <div className="text-center mt-12">
-          <Link to="/projects" className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors text-sm font-medium w-full md:w-auto">
-            View More Projects
-          </Link>
-        </div>
       </div>
     </section>
   );
 };
 
-export default Projects;
+export default AllProjects;

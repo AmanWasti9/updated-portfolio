@@ -1,25 +1,29 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import { ThemeProvider } from './context/ThemeContext';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import { ThemeProvider } from "./context/ThemeContext";
+import AllProjects from "./components/AllProjects";
+import Home from "./Pages/Home";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white" style={{
-         overflowX: "hidden",
-      }}>
-        <Navbar />
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </div>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider>
+        <div
+          className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white"
+          style={{
+            overflowX: "hidden",
+          }}
+        >
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<AllProjects />} />
+          </Routes>
+          <Contact />
+        </div>
+      </ThemeProvider>
+    </Router>
   );
 }
 

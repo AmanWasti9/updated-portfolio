@@ -49,13 +49,15 @@ const Contact = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://github.com/AmanWasti9"
+                target="_blank"
                 className="dark:text-gray-400 dark:hover:bg-zinc-800 dark:hover:text-white hover:bg-zinc-200/50 transition-colors rounded-md p-3"
               >
                 <FaGithub className="w-5 h-5 hover:scale-110" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/aman-wasti/"
+                target="_blank"
                 className="dark:text-gray-400 dark:hover:bg-zinc-800 dark:hover:text-white hover:bg-zinc-200/50 transition-colors rounded-md p-3"
               >
                 <FaLinkedin className="w-5 h-5 hover:scale-110" />
@@ -63,8 +65,6 @@ const Contact = () => {
               <a
                 href="#"
                 className="dark:text-gray-400 dark:hover:bg-zinc-800 dark:hover:text-white hover:bg-zinc-200/50 transition-colors rounded-md p-3"
-
-                // className="dark:text-gray-400 text-gray-600 hover:text-red-600"
               >
                 <FaTwitter className="w-5 h-5 hover:scale-110" />
               </a>
