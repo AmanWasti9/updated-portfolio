@@ -6,7 +6,7 @@ const ProjectCard = ({ title, tagline, description, tags, image, links }) => (
   <div className="bg-transparent border-[1px] border-red-700/20 rounded-lg overflow-hidden group backdrop-blur-sm">
     <div className="relative w-full group-hover:scale-105 transition-transform duration-500">
       <img src={image} alt={title} className="object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-t dark:from-black from-white to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t dark:from-black from-white/20 to-transparent" />
     </div>
     <div className="p-6">
       <p className="text-xl font-bold mb-3">{title}</p>
