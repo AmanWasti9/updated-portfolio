@@ -29,15 +29,34 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-5 md:px-16 py-4 flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="text-3xl font-bold text-red-600">SW</Link>
+          <Link to="/" className="text-3xl font-bold text-red-600">
+            AW
+          </Link>
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex items-center gap-6">
-            {["About", "Skills", "Projects", "Contact"].map((item) => (
+            {/* {["About", "Skills", "Projects", "Contact"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 className="hover:text-red-600"
+              >
+                {item}
+              </a>
+            ))} */}
+
+            {["About", "Skills", "Projects", "Contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="hover:text-red-600 cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  const section = document.getElementById(item.toLowerCase());
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 {item}
               </a>
@@ -46,7 +65,7 @@ const Navbar = () => {
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800"
+              className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 border border-transparent hover:border-[#ea384c]"
             >
               {darkMode ? (
                 <BsSun className="w-5 h-5" />
@@ -84,12 +103,29 @@ const Navbar = () => {
           </button>
 
           {/* Menu Links */}
-          {["About", "Skills", "Projects", "Contact"].map((item) => (
+          {/* {["About", "Skills", "Projects", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
               className="text-lg hover:text-red-600"
               onClick={() => setMenuOpen(false)}
+            >
+              {item}
+            </a>
+          ))} */}
+
+          {["About", "Skills", "Projects", "Contact"].map((item) => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="hover:text-red-600 cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault(); // Prevent default anchor behavior
+                const section = document.getElementById(item.toLowerCase());
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               {item}
             </a>

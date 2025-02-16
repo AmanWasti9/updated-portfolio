@@ -35,7 +35,9 @@ const SkillSection = ({ title, skills, categoryIndex }) => (
 const Stats = ({ number, label }) => (
   <div className="text-center border dark:border-zinc-700 rounded-lg p-4">
     <div className="text-red-600 text-2xl font-bold mb-1">{number}+</div>
-    <div className="dark:text-gray-400 text-gray-600 text-sm font-medium">{label}</div>
+    <div className="dark:text-gray-400 text-gray-600 text-sm font-medium">
+      {label}
+    </div>
   </div>
 );
 
@@ -43,21 +45,20 @@ const Skills = () => {
   const skillSections = {
     frontend: [
       { name: "HTML/CSS", level: 95 },
-      { name: "JavaScript", level: 90 },
+      { name: "JavaScript", level: 75 },
       { name: "React.js", level: 85 },
-      { name: "Vue.js", level: 80 },
+      { name: "React Native", level: 75 },
     ],
     backend: [
-      { name: "Node.js", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "PHP", level: 80 },
-      { name: "Java", level: 75 },
+      { name: "Node.js/Express", level: 55 },
+      { name: "Java/Spring Boot", level: 70 },
+      { name: "SQL/NoSQL", level: 75 },
     ],
-    devops: [
-      { name: "AWS", level: 85 },
-      { name: "Docker", level: 80 },
-      { name: "CI/CD", level: 75 },
-      { name: "Linux", level: 85 },
+    tools: [
+      { name: "Firebase/Firestore", level: 80 },
+      { name: "Git/GitHub", level: 80 },
+      { name: "CI/CD", level: 85 },
+      { name: "Vercel", level: 90 },
     ],
   };
 
@@ -72,18 +73,12 @@ const Skills = () => {
           user-friendly applications
         </p>
 
-        {/* <div className="grid grid-cols-4 gap-8 mb-16">
-          <Stats number="6" label="Years Experience" />
-          <Stats number="50" label="Projects Done" />
-          <Stats number="30" label="Happy Clients" />
-          <Stats number="1000" label="Work Hours" />
-        </div> */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {[
-            { number: "6", label: "Years Experience" },
-            { number: "50", label: "Projects Done" },
-            { number: "30", label: "Happy Clients" },
-            { number: "1000", label: "Work Hours" },
+            { number: "3", label: "Years Experience" },
+            { number: "10", label: "Projects Done" },
+            { number: "4", label: "Happy Clients" },
+            { number: "3000", label: "Work Hours" },
           ].map((metric, index) => (
             <motion.div
               key={metric.label}

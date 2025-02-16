@@ -27,7 +27,7 @@ const ProjectCard = ({ title, tagline, description, tags, image, links }) => (
           href={links.github}
           target="_blank"
           className="bg-gradient-to-r from-transparent dark:to-zinc-800 to-zinc-100
-           flex items-center justify-center border dark:border-zinc-800 text-black dark:text-white 
+           flex items-center justify-center border dark:border-zinc-800 text-black dark:text-white hover:border-[#ea384c]
            px-6 py-2 rounded-lg dark:hover:border-[#ea384c] transition-all duration-300 text-sm font-medium w-full"
         >
           <Github className="w-4 h-4 mr-2" />
@@ -187,7 +187,7 @@ const AllProjects = () => {
 
   return (
     <section
-      id="projects"
+      id="allProjects"
       className="px-5 md:px-16 py-24 relative bg-white dark:bg-black"
     >
       <div className="container mx-auto px-5 md:px-16">

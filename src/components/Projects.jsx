@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const ProjectCard = ({ title, tagline, description, tags, image, links }) => (
-  <div className="bg-transparent border-[1px] border-red-700/20 rounded-lg overflow-hidden group backdrop-blur-sm">
+  <div className="bg-transparent border-[2px] border-red-700/20 rounded-lg overflow-hidden group backdrop-blur-sm">
     <div className="relative w-full group-hover:scale-105 transition-transform duration-500">
       <img src={image} alt={title} className="object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t dark:from-black from-white/20 to-transparent" />
@@ -30,7 +30,7 @@ const ProjectCard = ({ title, tagline, description, tags, image, links }) => (
           href={links.github}
           target="_blank"
           className="bg-gradient-to-r from-transparent dark:to-zinc-800 to-zinc-100
-           flex items-center justify-center border dark:border-zinc-800 text-black dark:text-white 
+           flex items-center justify-center border dark:border-zinc-800 text-black dark:text-white hover:border-[#ea384c]
            px-6 py-2 rounded-lg dark:hover:border-[#ea384c] transition-all duration-300 text-sm font-medium w-full"
         >
           <Github className="w-4 h-4 mr-2" />

@@ -18,17 +18,47 @@ const Contact = () => {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 dark:text-gray-400 text-gray-600">
               <li>
-                <a href="#about" className="hover:text-red-600">
+                <a
+                  href="#about"
+                  className="hover:text-red-600"
+                  onClick={(e) => {
+                    e.preventDefault(); // Prevent default jump behavior
+                    const section = document.getElementById("about");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#skills" className="hover:text-red-600">
+                <a
+                  href="#skills"
+                  className="hover:text-red-600"
+                  onClick={(e) => {
+                    e.preventDefault(); // Prevent default jump behavior
+                    const section = document.getElementById("skills");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                >
                   Skills
                 </a>
               </li>
               <li>
-                <a href="#projects" className="hover:text-red-600">
+                <a
+                  href="#projects"
+                  className="hover:text-red-600"
+                  onClick={(e) => {
+                    e.preventDefault(); // Prevent default jump behavior
+                    const section = document.getElementById("projects");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                >
                   Projects
                 </a>
               </li>

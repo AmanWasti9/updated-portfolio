@@ -5,7 +5,10 @@ import { TypeAnimation } from "react-type-animation";
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-start px-5 md:px-16 bg-white dark:bg-black overflow-hidden text-center md:text-left">
+    <div
+      id="home"
+      className="relative min-h-screen flex flex-col justify-center items-start px-5 md:px-16 bg-white dark:bg-black overflow-hidden text-center md:text-left"
+    >
       <AnimatedBackground />
       <div className="z-10 max-w-3xl">
         <p className="text-[#ea384c] font-mono mb-4 title-animation">
@@ -39,14 +42,28 @@ const Hero: React.FC = () => {
           <a
             href="#projects"
             className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors text-sm font-medium w-full md:w-auto"
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default jump behavior
+              const section = document.getElementById("projects");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           >
             View Projects
           </a>
           <a
             href="#contact"
             className="bg-gradient-to-r from-transparent dark:to-zinc-800 to-zinc-100
-                px-6 py-2 border dark:border-zinc-800 text-black dark:text-white 
+                px-6 py-2 border dark:border-zinc-800 text-black dark:text-white hover:border-[#ea384c]
                 rounded-lg dark:hover:border-[#ea384c] transition-all duration-300 text-sm font-medium w-full md:w-auto"
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default jump behavior
+              const section = document.getElementById("contact");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           >
             Contact Me
           </a>
