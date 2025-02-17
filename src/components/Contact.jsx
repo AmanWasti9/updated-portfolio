@@ -63,8 +63,13 @@ const Contact = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-red-600">
-                  View My Job Portfolio
+                <a
+                  href="https://old-portfolio-webapp.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-red-600"
+                >
+                  Old Portfolio
                 </a>
               </li>
             </ul>
