@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Github, ExternalLink, X, PlayCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
-
 const ProjectCard = ({
   title,
   description,
@@ -71,11 +70,14 @@ const ProjectCard = ({
 };
 
 const VideoModal = ({ isOpen, onClose, videoUrl }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-md flex items-center justify-center z-50">
       <div className="bg-white dark:bg-zinc-900 p-8 rounded-lg w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 shadow-xl relative">
+        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-0 right-0 text-white bg-red-600 hover:bg-red-700 px-2 py-1 rounded-lg"
@@ -83,18 +85,28 @@ const VideoModal = ({ isOpen, onClose, videoUrl }) => {
           <X className="w-5 h-5" />
         </button>
 
+        {/* Loader */}
+        {isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
+            <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-red-500"></div>
+          </div>
+        )}
+
+        {/* Video */}
         <div className="relative w-full pt-[56.25%]">
           <iframe
             src={videoUrl}
             className="absolute top-0 left-0 w-full h-full rounded-lg"
             frameBorder="0"
             allowFullScreen
+            onLoad={() => setIsLoading(false)}
           ></iframe>
         </div>
       </div>
     </div>
   );
 };
+
 
 const Projects = () => {
   const [isModalOpen, setModalOpen] = useState(false);
