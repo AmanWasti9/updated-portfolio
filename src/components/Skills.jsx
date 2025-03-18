@@ -50,8 +50,8 @@ const Skills = () => {
       { name: "React Native", level: 75 },
     ],
     backend: [
-      { name: "Node.js/Express", level: 55 },
       { name: "Java/Spring Boot", level: 70 },
+      { name: "Node.js/Express", level: 55 },
       { name: "SQL/NoSQL", level: 75 },
     ],
     tools: [
