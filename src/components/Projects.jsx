@@ -96,6 +96,7 @@ const VideoModal = ({ isOpen, onClose, videoUrl }) => {
         <div className="relative w-full pt-[56.25%]">
           <iframe
             src={videoUrl}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             className="absolute top-0 left-0 w-full h-full rounded-lg"
             frameBorder="0"
             allowFullScreen
@@ -160,7 +161,7 @@ const Projects = () => {
         github: "https://github.com/AmanWasti9/Blogging-App-Frontend",
         live: "#", // No live URL yet
       },
-      videoUrl: "/beacon.mp4", // Replace with actual video URL
+      videoUrl: "https://www.youtube.com/embed/jAvP_jpJP60",
     },
 
     {
