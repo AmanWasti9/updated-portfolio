@@ -11,17 +11,17 @@ import { Header } from "@/components/home/Header";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "CTRL SHIFT ACTION — Software Development & UI/UX Design" },
+      { title: "Syed Amanullah Wasti — Software Developer" },
       {
         name: "description",
         content:
-          "Portfolio of a software developer and UI/UX designer building bold, high-performance products.",
+          "Portfolio of a software developer building high-performance products.",
       },
-      { property: "og:title", content: "CTRL SHIFT ACTION — Software Development & UI/UX Design" },
+      { property: "og:title", content: "Syed Amanullah Wasti — Software Developer" },
       {
         property: "og:description",
         content:
-          "Portfolio of a software developer and UI/UX designer building bold, high-performance products.",
+          "Portfolio of a software developer building high-performance products.",
       },
     ],
   }),
