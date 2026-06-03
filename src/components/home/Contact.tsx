@@ -38,7 +38,7 @@ export function Contact() {
           </div>
         </motion.div>
         <motion.div
-          className="mx-auto max-w-2xl flex flex-col justify-center items-center pb-8 md:pb-0"
+          className="mx-auto max-w-2xl flex flex-col justify-center items-center md:items-start pb-8 md:pb-0"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}

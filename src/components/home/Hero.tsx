@@ -19,7 +19,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-background text-foreground flex flex-col justify-between overflow-hidden  mx-auto max-w-7xl px-6 md:px-10">
+    <section className="relative min-h-screen bg-background text-foreground flex flex-col justify-between overflow-hidden  mx-auto max-w-7xl px-6 md:px-10 pt-0 md:pt-20">
 
       {/* keycaps */}
       <div className="absolute right-[-40px] top-16 md:top-24 w-[260px] md:w-[460px] lg:w-[520px] animate-[float_6s_ease-in-out_infinite] z-10 pointer-events-none">
@@ -48,7 +48,7 @@ export function Hero() {
       </div>
 
       {/* headline */}
-      <div className="relative z-10 mt-24 md:mt-10 pointer-events-none">
+      <div className="relative z-10 mt-24 pointer-events-none">
         <div className="pointer-events-auto w-fit">
           {/* <div className="label-mono text-primary">▸ SOFTWARE DEVELOPER × UI/UX DESIGNER</div> */}
           {/* <h1 className="text-display text-[7vw] md:text-[10vw] leading-[0.85]">
@@ -97,7 +97,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="flex justify-between items-end pb-6 mt-10 md:mt-0 label-mono opacity-60 text-xs md:text-sm">
+      <div className="flex justify-between items-end pb-6 mt-10 md:mt-4 label-mono opacity-60 text-xs md:text-sm">
         <span>↓ SCROLL TO ENTER</span>
         <span>CTRL SHIFT ACTION</span>
       </div>
