@@ -41,6 +41,8 @@ export function Journey() {
             transition={{ duration: 0.6 }}
             className="md:col-span-5 md:sticky md:top-[30vh]"
           >
+            <div className="h-[3px] w-16 bg-primary mb-6" />
+
             <h2 className="text-display text-5xl md:text-8xl max-w-4xl">
               my current <span className="text-primary">journey.</span>
             </h2>
@@ -53,7 +55,8 @@ export function Journey() {
           </motion.div>
 
           <div className="md:col-span-7 relative">
-            <div className="absolute left-[7.25rem] top-2 bottom-2 w-px bg-gradient-to-b from-primary/60 via-border to-transparent" />
+            <div className="absolute left-[3rem] sm:left-[4rem] md:left-[7.25rem] top-2 bottom-2 w-px bg-gradient-to-b from-primary/60 via-border to-transparent" />
+
             <ul className="space-y-10">
               {timeline.map((t, i) => (
                 <motion.li
@@ -62,12 +65,14 @@ export function Journey() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.55, delay: i * 0.1 }}
-                  className="relative grid grid-cols-[7rem_auto_1fr] gap-6 items-start"
+                  className="relative grid grid-cols-[2.5rem_auto_1fr] sm:grid-cols-[4rem_auto_1fr] md:grid-cols-[7rem_auto_1fr] gap-3 md:gap-6 items-start"
                 >
                   <div className="label-mono text-muted-foreground pt-1">
                     {t.year}
                   </div>
+
                   <div className="relative h-4 w-4 mt-2 bg-primary glow-shadow ring-4 ring-background" />
+
                   <div>
                     <h3 className="text-display text-2xl md:text-3xl mb-2 text-foreground">
                       {t.title}

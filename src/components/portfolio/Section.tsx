@@ -17,8 +17,8 @@ export function Section({
     bg === "orange"
       ? "bg-primary text-primary-foreground"
       : bg === "dark"
-      ? "bg-[oklch(0.08_0_0)] text-foreground"
-      : "bg-background text-foreground";
+        ? "bg-[oklch(0.08_0_0)] text-foreground"
+        : "bg-background text-foreground";
   return (
     <section
       id={id}
@@ -30,7 +30,7 @@ export function Section({
           {label}
         </div>
       )}
-      <div className="relative px-6 md:px-12 py-16 md:py-24">{children}</div>
+      <div className="relative py-16 md:py-24">{children}</div>
     </section>
   );
 }

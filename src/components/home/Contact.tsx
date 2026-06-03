@@ -7,9 +7,10 @@ export function Contact() {
         <span className="inline-block w-2 h-2 bg-primary" />
         CONNECTION ESTABLISHED
       </div>
-      <div className="flex md:flex-row flex-col justify-between items-center gap-6">
-        <motion.div 
-          className="mx-auto max-w-7xl px-6 md:px-10 py-24 md:py-32"
+      <div className="flex md:flex-row flex-col justify-between gap-6 mx-auto max-w-7xl px-6 md:px-10">
+        <motion.div
+          className=
+          "pt-16 pb-8 md:py-32"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -19,7 +20,7 @@ export function Contact() {
             let's build<br />
             <span className="text-primary">the future.</span>
           </h2>
-          <div className="mt-12 flex flex-wrap gap-8 label-mono text-lg">
+          <div className="mt-6 md:mt-12 flex flex-wrap gap-8 label-mono text-lg">
             {[
               ["GITHUB", "https://github.com/AmanWasti9"],
               ["LINKEDIN", "https://www.linkedin.com/in/aman-wasti/"],
@@ -36,28 +37,28 @@ export function Contact() {
             ))}
           </div>
         </motion.div>
-        <motion.div 
-          className="mx-auto max-w-2xl px-6 md:px-10 py-24 md:py-32"
+        <motion.div
+          className="mx-auto max-w-2xl flex flex-col justify-center items-center pb-8 md:pb-0"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          <p>
+          <p className="text-sm md:text-base">
             Whether it's a startup idea,
             a product redesign, or a creative project,
             I'm always excited to collaborate and build
             something meaningful.
           </p>
           <br />
-          <p className="text-lg">
+          <p className="text-sm md:text-base">
             Currently available for freelance,
             full-time opportunities, and creative collaborations.
           </p>
         </motion.div>
 
       </div>
-      <div className="border-t border-border px-6 md:px-12 py-6 label-mono opacity-60 flex flex-wrap justify-between gap-2">
+      <div className="border-t border-border px-6 md:px-12 py-6 label-mono opacity-60 flex flex-wrap md:justify-between justify-center text-center gap-2">
         <span>© 2026 // Syed Amanullah Wasti. All rights reserved.
         </span>
         <span>CTRL SHIFT ACTION</span>

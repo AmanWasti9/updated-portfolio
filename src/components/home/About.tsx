@@ -24,17 +24,17 @@ export function About() {
           </motion.div>
 
           {/* Right Column */}
-          <motion.div 
+          <motion.div
             className="space-y-8 flex flex-col justify-center h-full"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            <p className="text-xl md:text-2xl text-foreground font-medium leading-relaxed max-w-xl">
+            <p className="text-lg md:text-2xl text-foreground font-medium leading-relaxed max-w-xl">
               I'm a software engineer who believes the line between product and poetry is thinner than people think. I spend my days writing TypeScript, sketching layouts, and obsessing over the small moments that make a product feel <span className="text-primary italic">alive.</span>
             </p>
-            <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-xl pt-4">
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-xl md:pt-4">
               From databases to design systems, I work across the stack and love collaborating with teams who care as much about the comma before a period as the architecture behind it.
             </p>
 

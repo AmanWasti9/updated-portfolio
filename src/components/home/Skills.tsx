@@ -34,11 +34,11 @@ export function Skills() {
               I enjoy turning ideas into production-ready software.
             </p> */}
           </div>
-          <div className="mt-16 grid gap-6">
+          <div className="mt-8 md:mt-16 grid gap-6">
             {stacks.map((s, index) => (
-              <motion.article 
-                key={s.label} 
-                className="brutal-card p-8 md:p-10"
+              <motion.article
+                key={s.label}
+                className="brutal-card p-4 md:p-10"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -49,16 +49,16 @@ export function Skills() {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-8">{s.desc}</p>
                 <ul className="divide-y divide-border border-t border-border">
                   {s.items.map(([k, v]) => (
-                    <li key={k} className="grid grid-cols-[110px_1fr] gap-4 py-3 text-sm">
+                    <li key={k} className="grid grid-cols-[110px_1fr] gap-0 md:gap-4 py-3 text-sm">
                       <span className="label-mono text-primary">{k}</span>
-                      <span className="font-mono opacity-90">{v}</span>
+                      <span className="label-mono opacity-90">{v}</span>
                     </li>
                   ))}
                 </ul>
               </motion.article>
             ))}
           </div>
-          <div className="mt-10 grid grid-cols-3 gap-6 max-w-2xl">
+          <div className="mt-10 grid grid-cols-3 gap-3 md:gap-6 max-w-2xl flex justify-center items-center">
             {[
 
               { n: "12+", l: "PROJECTS BUILT" },
@@ -66,9 +66,9 @@ export function Skills() {
               { n: "15+", l: "TECHNOLOGIES USED" },
 
             ].map((s, i) => (
-              <motion.div 
-                key={s.l} 
-                className="border-l border-border pl-4"
+              <motion.div
+                key={s.l}
+                className="border-l border-border pl-2 md:pl-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}

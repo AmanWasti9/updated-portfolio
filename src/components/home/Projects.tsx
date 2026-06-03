@@ -70,6 +70,8 @@ export function Projects() {
   return (
     <Section id="projects" label="02 // SELECTED PROJECTS" bg="black">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12  mx-auto max-w-7xl px-6 md:px-10">
+        <div className="h-[3px] w-16 bg-primary mb-6" />
+
         <h2 className="text-display text-5xl md:text-8xl">
           the <span className="text-primary">archive.</span>
         </h2>
@@ -77,10 +79,10 @@ export function Projects() {
           ▸ A small selection. Code repos & case studies on request.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 gap-6  mx-auto max-w-7xl px-6 md:px-10">
+      <div className="grid md:grid-cols-2 gap-6 mx-auto max-w-7xl px-6 md:px-10">
         {projects.map((p, index) => (
-          <motion.article 
-            key={p.title} 
+          <motion.article
+            key={p.title}
             className="brutal-card overflow-hidden flex flex-col group cursor-pointer"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -108,7 +110,7 @@ export function Projects() {
                 <div className="absolute inset-0 bg-[linear-gradient(135deg,transparent_46%,rgba(0,0,0,0.15)_50%,transparent_54%)]" />
               </div>
             )}
-            <div className="p-8 flex-1 flex flex-col">
+            <div className="p-4 md:p-8 flex-1 flex flex-col">
               <div className="flex items-center justify-between mb-3 label-mono opacity-80">
                 <span>▸ {p.tag}</span>
                 <span className="text-primary">{p.role}</span>

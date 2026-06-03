@@ -22,28 +22,33 @@ export function Hero() {
     <section className="relative min-h-screen bg-background text-foreground flex flex-col justify-between overflow-hidden  mx-auto max-w-7xl px-6 md:px-10">
 
       {/* keycaps */}
-      <div className="absolute right-[-40px] top-16 md:top-24 w-[260px] md:w-[460px] lg:w-[520px] animate-[float_6s_ease-in-out_infinite] z-20 pointer-events-none">
-        <img
-          src={keycaps}
-          alt=""
-          aria-hidden
-          width={520}
-          height={520}
-          className="
-            w-full h-full
-            select-none
-            hover:drop-shadow-[0_20px_60px_rgba(255,61,0,0.35)]
-            grayscale
-            pointer-events-auto
-            hover:grayscale-0
-            hover:scale-105
-            transition-all duration-500 ease-out
-          "
-        />
+      <div className="absolute right-[-40px] top-16 md:top-24 w-[260px] md:w-[460px] lg:w-[520px] animate-[float_6s_ease-in-out_infinite] z-10 pointer-events-none">
+        <div className="relative w-full h-full">
+          <img
+            src={keycaps}
+            alt=""
+            aria-hidden
+            width={520}
+            height={520}
+            className="
+        w-full h-full
+        select-none
+        grayscale
+        pointer-events-auto
+        hover:grayscale-0
+        hover:scale-105
+        transition-all duration-500 ease-out
+        hover:drop-shadow-[0_20px_60px_rgba(255,61,0,0.35)]
+      "
+          />
+
+          {/* Dark Overlay */}
+          <div className="block md:hidden absolute inset-0 bg-black/50"></div>
+        </div>
       </div>
 
       {/* headline */}
-      <div className="relative z-10 mt-10 pointer-events-none">
+      <div className="relative z-10 mt-24 md:mt-10 pointer-events-none">
         <div className="pointer-events-auto w-fit">
           {/* <div className="label-mono text-primary">▸ SOFTWARE DEVELOPER × UI/UX DESIGNER</div> */}
           {/* <h1 className="text-display text-[7vw] md:text-[10vw] leading-[0.85]">
@@ -52,7 +57,7 @@ export function Hero() {
             <span className="text-primary">ship.</span>
           </h1> */}
           {/* CODE */}
-          <h1 className="text-display text-[7vw] md:text-[10vw] leading-[0.85]">
+          <h1 className="text-display text-[72px] md:text-[10vw] leading-[0.85]">
             {"code.".split("").map((ch, i) => (
               <span key={i} ref={code.setRef} className="inline-block">
                 {ch}
@@ -61,7 +66,7 @@ export function Hero() {
           </h1>
 
           {/* CRAFT */}
-          <h1 className="text-display text-[7vw] md:text-[10vw] leading-[0.85]">
+          <h1 className="text-display text-[72px] md:text-[10vw] leading-[0.85]">
             {"craft.".split("").map((ch, i) => (
               <span key={i} ref={craft.setRef} className="inline-block">
                 {ch}
@@ -70,7 +75,7 @@ export function Hero() {
           </h1>
 
           {/* SHIP */}
-          <h1 className="text-display text-primary text-[7vw] md:text-[10vw] leading-[0.85]">
+          <h1 className="text-display text-primary text-[72px]  md:text-[10vw] leading-[0.85]">
             {"ship.".split("").map((ch, i) => (
               <span key={i} ref={ship.setRef} className="inline-block">
                 {ch}
@@ -82,7 +87,7 @@ export function Hero() {
             from pixel-perfect interfaces to the systems that power them.
           </p>
         </div>
-        <div className="mt-8 flex gap-3 pointer-events-auto w-fit">
+        <div className="mt-8 flex flex-col md:flex-row gap-3 pointer-events-auto w-full md:w-fit">
           <a href="#projects" className="bg-primary text-primary-foreground px-6 py-3 label-mono font-bold hover:bg-white transition">
             ▸ VIEW PROJECTS
           </a>
@@ -92,7 +97,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="flex justify-between items-end pb-6 label-mono opacity-60">
+      <div className="flex justify-between items-end pb-6 mt-10 md:mt-0 label-mono opacity-60 text-xs md:text-sm">
         <span>↓ SCROLL TO ENTER</span>
         <span>CTRL SHIFT ACTION</span>
       </div>
